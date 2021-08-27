@@ -53,7 +53,7 @@ pipeline {
         success { 
             echo 'Job is success and triggering another pipeline'
             echo "Artifact id is : $env.Artifact_ID"
-            build job: 'Nomad-Job-Arun' ,parameters: [string(name: 'ARTIFACT_REST', value: "$env.Artifact_ID")]
+            build job: 'practical-nomad-consul' ,parameters: [string(name: 'ARTIFACT_REST', value: "$env.Artifact_ID")]
         }
     }
 
